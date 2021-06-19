@@ -29,7 +29,7 @@ export default class ProductService {
     async createProduct(product) {
         try {
             const newProduct = await axios.post(`http://localhost:8000/api/products/new`, product)
-            return product.data.Player;
+            return newProduct.data.Player;
         } catch(err) {
             return err;
         }
